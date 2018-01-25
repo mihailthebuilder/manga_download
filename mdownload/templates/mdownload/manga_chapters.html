@@ -1,0 +1,28 @@
+{% extends "mdownload/base.html" %}
+{% load static %}
+
+{% block header %}
+	<h2>{{mangaTitle}}</h2>
+{% endblock header %}
+
+{% block content %}
+
+	<img id="loading" style="display: none;" src="{% static 'img/loading.gif' %}" />
+	
+	<table class="table table-striped">
+		<tbody>
+			{% for chapter in chaptersList %}
+				<tr>
+					<td>
+						<h4>
+							<a class="downloadLink" href="{% url 'mdownload:chapter_download' forloop.counter0 %}">{{chapter.0}}</a>
+						</h4>
+					</td>
+				</tr>
+			{% empty %}
+				No results available based on your search.
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock content %}

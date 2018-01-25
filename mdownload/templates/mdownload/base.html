@@ -1,0 +1,41 @@
+<!--loading bootstrap3 library-->
+{% load bootstrap3 %}
+{% load static %}
+
+<!--declare file as HTML in english -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--include a title element which will be displayed in the title bar of the browser -->
+		<title>Manga Downloader</title>
+		
+		<!-- include all Bootstrap style and js files from django-boostrap3 -->
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+		
+		<!--include jQuery -->
+		<script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+		<script src="{% static 'js/js-cookie-2.1.4.js' %}"></script>
+		
+		<!-- include your custom javascript and css files -->
+		<script src="{% static 'js/main.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/styleMaster.css' %}" type="text/css" />
+	</head>
+	
+	<body>
+			<!-- the main part of the page -->
+		<div class="container">
+			<!-- the header block has info on what's on this page
+			and what you can do with it -->
+			<div class="page-header">
+				{% block header %}{% endblock header %}
+			<!-- this is where the actual content of the templates comes in -->
+			</div>
+				{% block content %}{% endblock content %}
+			<div
+		</div>
+	</body>

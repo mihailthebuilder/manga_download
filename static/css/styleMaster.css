@@ -1,0 +1,16 @@
+
+/*the loading gif */
+#loading {
+	opacity: 0.8;
+	position: fixed;
+	width: 100%;
+	display: none;
+	height:100%;
+	top:0;
+	left:0;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #fff2e6; // Choose your own color here
+ }

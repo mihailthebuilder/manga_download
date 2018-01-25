@@ -1,0 +1,24 @@
+{% extends "mdownload/base.html" %}
+
+{% block header %}
+	<h2>Results for "{{searchInput}}"</h2>
+{% endblock header %}
+
+{% block content %}
+	<table class="table table-striped">
+		<tbody>
+			{% for manga in searchResults %}
+				<tr>
+					<td>
+						<h4>
+							<a href="{% url 'mdownload:manga_chapters' forloop.counter0 %}">{{manga.0}}</a>
+						</h4>
+					</td>
+				</tr>
+			{% empty %}
+				No results available based on your search.
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock content %}
