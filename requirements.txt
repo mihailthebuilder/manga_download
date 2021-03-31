@@ -10,7 +10,7 @@ eventlet==0.20.0
 greenlet==0.4.12
 idna==2.6
 iso8601==0.1.12
-lxml==4.1.1
+lxml==4.6.3
 monotonic==1.4
 netaddr==0.7.19
 oslo.i18n==3.19.0
